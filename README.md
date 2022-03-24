@@ -80,7 +80,16 @@ Space reserved only for docker. It's a security space management to docker conta
 
 Dockerfile allow to build custom images
 
+### Docker build
 
+| Command | Param | Agregate | Description | Example |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|  docker build | -t, --tag  | image name | Build custom image  | docker build -t ubuntu:platzi . |
+
+
+<p align="center">
+    <img alt="Created by Fernando Aguilar" src="https://res.cloudinary.com/dohkdu219/image/upload/v1642443309/portfolio/signature_oq60qf.png" width="80%" />
+</p>
 
 
 
