@@ -46,3 +46,26 @@ docker utilities
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  docker ps | -  | - | Show running containers  | docker ps |
 |  docker ps | -a, --all | - | Show all containers (dead or live) | docker ps -a |
+
+
+## Bind mounts
+
+Share information in local folder to docker container.
+
+| Command | Param | Agregate | Description | Example |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|  docker run | -v  | localpath:containerpath | Share information local folder to docker container  | docker run -d --name mongodb -v /home/feraguilar/Escritorio/docker-data:/data/db mongo |
+
+## Volumes
+
+Space reserved only for docker. It's a security space management to docker containers.
+
+| Command | Param | Agregate | Description | Example |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|  docker volume | ls  | - | Show all docker volumes  | docker volume ls |
+|  docker volume | create  | volume name | Create new volume  | docker volume create mongodata |
+|  docker run | --mount  | src=volume,dst=containerdata | Assign volume to container  | docker run -d --name mongodb --mount src=mongodata,dst=/data/db mongo |
+|  docker volume | rm | volume name | Remove volume | docker volume rm mongodata |
+
+
+
