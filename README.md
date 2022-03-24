@@ -67,5 +67,20 @@ Space reserved only for docker. It's a security space management to docker conta
 |  docker run | --mount  | src=volume,dst=containerdata | Assign volume to container  | docker run -d --name mongodb --mount src=mongodata,dst=/data/db mongo |
 |  docker volume | rm | volume name | Remove volume | docker volume rm mongodata |
 
+## Images
+
+| Command | Param | Agregate | Description | Example |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|  docker image | ls  | - | Show all docker images  | docker image ls |
+|  docker pull | -  | image name | Download docker image  | docker pull ubuntu |
+|  docker image | rm  | image name | Remove docker image  | docker image rm ubuntu |
+|  docker history | -  | - | Show tracking docker image  | docker history ubuntu |
+
+## Dockerfile
+
+Dockerfile allow to build custom images
+
+
+
 
 
