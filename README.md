@@ -24,6 +24,9 @@ docker utilities
 |  docker rm | - |  container ID | Remove container to ps | docker rm 7e5b48afe796 |
 |  docker container prune | - |  container ID | Remove all to stop container | docker container prune |
 |  docker stop | - |  container ID | Stop container | docker stop 7e5b48afe796 |
+|  docker logs | - |  container ID | Show container logs | docker logs proxy |
+|  docker logs | -f |  container ID | Show container logs in realtime | docker logs -f proxy |
+|  docker logs | --tail |  container ID | Show container logs from ultimate lines | docker logs --tail 10 -f proxy |
 
 
 **Command:** docker run
@@ -35,6 +38,7 @@ docker utilities
 |  docker run | -it | image name | Execute a container in interactive mode | docker run -it ubuntu |
 |  docker run | -d, --detach | image name | Execute a container to background | docker run -d ubuntu tail -f /dev/null|
 |  docker exec | - | container name | Entry to container running | docker exec -it ubuntu bash|
+|  docker run | -p, --publish | localport:containerport | Listen port | docker run -d --name proxy --publish 8080:80 nginx |
 
 **Command:** docker ps
 
