@@ -15,12 +15,26 @@ This is a complete guide about docker commands, functions and others. using dock
 
 ## General commands
 
+docker utilities
+
+| Command | Param | Agregate | Description | Example |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|  docker inspect | - |  container ID | Inspect container information | docker inspect 7e5b48afe796 |
+|  docker rename | - |  container name | Change name to container | docker rename origialname newname |
+|  docker rm | - |  container ID | Remove container to ps | docker rm 7e5b48afe796 |
+|  docker container prune | - |  container ID | Remove all to stop container | docker container prune |
+|  docker stop | - |  container ID | Stop container | docker stop 7e5b48afe796 |
+
+
 **Command:** docker run
 
 | Command | Param | Agregate | Description | Example |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |  docker run | -  |  image name | Execute a container | docker run hello-world |
 |  docker run | --name  |  container name | Execute a container with name | docker run --name hello-platzi hello-world |
+|  docker run | -it | image name | Execute a container in interactive mode | docker run -it ubuntu |
+|  docker run | -d, --detach | image name | Execute a container to background | docker run -d ubuntu tail -f /dev/null|
+|  docker exec | - | container name | Entry to container running | docker exec -it ubuntu bash|
 
 **Command:** docker ps
 
